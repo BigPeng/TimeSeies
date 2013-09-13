@@ -237,8 +237,8 @@ public class Similarity {
 		i = 0;
 		for (String item : candidertString)
 			candidert[i++] = Double.valueOf(item);
-		Similarity s = new Similarity(21, 10);
-		double dis = s.constraintDtw(query, candidert, 0.05f);
+		Similarity s = new Similarity(500, 500);
+		double dis = s.constraintDtw(query, candidert, 0.1f);
 		System.out.println(dis);
 		TextFile.write("disMatrix.txt", disMatrix);
 	}
